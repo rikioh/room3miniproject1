@@ -14,9 +14,10 @@ $("#artistName").on("click", function() {
 })
 
 // Populate iframe
-static_youtube_settings = ""
+static_youtube_url = "https://www.youtube.com/embed/"
 url = ""
-$('#video_player').attr('src', url)
+// url = object.items[0].id.VideoId
+$('#video_player').attr('src', static_youtube_url + url)
 
 // Populate lyrics
 $("#lyrics_box").text("FILL IN OBJECT HERE")
