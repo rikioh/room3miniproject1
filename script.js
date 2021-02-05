@@ -1,27 +1,41 @@
 // Empty variables for user input
-var song_title = ""
-var artist_name = ""
+var artistName = ""
+var songTitle = ""
+var lyricsUrl = "https://api.lyrics.ovh/v1/"
+var lyricsEl = $("#lyrics_box")
+var searchBtn = $("#searchBtn")
 var youtube_api_key = "AIzaSyBtIgwisnZlgFJWWjVAgFG-Mcdm1xSQWSw"
 
-// Button to pull song title
-$("#songTitle").on("click", function() {
-    song_title = $("#search-input").value
+
+$("#searchBtn").on("click", function (event) {
+    event.preventDefault();
+    artistName = $("#artistName").val()
+    songTitle = $("#songTitle").val()
+    console.log(artistName);
+    console.log(songTitle);
+    if (!artistName || !songTitle) {
+        console.error("You need to put both the song title and artist name");
+        return;
+    }
+    function searchApi(artistName, songTitle) {
+        var localUrl = `https://api.lyrics.ovh/v1/${artistName}/${songTitle}`
+        console.log(localUrl);
+        fetch(localUrl).then(function (response) {
+            if (!response.ok) {
+                throw response.json();
+            }
+
+            return response.json();
+        })
+            .then(function (locRes) {
+                console.log(locRes.lyrics);
+
+                localStorage.setItem("projectLyrics",JSON.stringify(locRes.lyrics))
+                window.location.href = "./display_video.html"
+            })
+    }
+
+    searchApi(artistName, songTitle);
+
+
 })
-
-// Button to pull song artist
-$("#artistName").on("click", function() {
-    song_title = $("#search-input").value
-})
-
-// Populate iframe
-static_youtube_url = "https://www.youtube.com/embed/"
-url = ""
-// url = object.items[0].id.VideoId
-$('#video_player').attr('src', static_youtube_url + url)
-
-// get lyrics from local storage
-var searchLyrics = JSON.parse(localStorage.getItem("projectLyrics"))
-
-// Populate lyrics
-$("#lyrics_box").text(searchLyrics)
-
