@@ -26,6 +26,7 @@ $("#searchBtn").on("click", function (event) {
         })
             .then(function (locRes) {
                 console.log(locRes.lyrics);
+
                 localStorage.setItem("projectLyrics",JSON.stringify(locRes.lyrics))
                 window.location.href = "./display_video.html"
             })
