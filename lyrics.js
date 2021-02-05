@@ -26,6 +26,7 @@ $("#searchBtn").on("click", function (event) {
         })
             .then(function (locRes) {
                 console.log(locRes.lyrics);
+                $("#lyrics_box").text(locRes.lyrics)
             })
     }
 
