@@ -15,7 +15,7 @@ $("#searchBtn").on("click", function (event) {
         return;
     }
     function searchApi(artistName, songTitle) {
-        var localUrl = 'https://api.lyrics.ovh/v1/' + artistName + '/' + songTitle
+        var localUrl = `https://api.lyrics.ovh/v1/${artistName}/${songTitle}`
         console.log(localUrl);
         fetch(localUrl).then(function (response) {
             if (!response.ok) {
@@ -26,7 +26,9 @@ $("#searchBtn").on("click", function (event) {
         })
             .then(function (locRes) {
                 console.log(locRes.lyrics);
-                $("#lyrics_box").text(locRes.lyrics)
+
+                localStorage.setItem("projectLyrics",JSON.stringify(locRes.lyrics))
+                window.location.href = "./display_video.html"
             })
     }
 
