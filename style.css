@@ -3,6 +3,12 @@ background-color: #262626;
 color: antiquewhite
 }
 
+.notification {
+text-align: center;
+font-size: 40px;
+font-weight: bolder;
+}
+
 .button{
     background-color: #00ffff;
     font-weight: bolder;
