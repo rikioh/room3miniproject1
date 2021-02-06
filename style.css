@@ -2,18 +2,6 @@ body {
 background-color: #262626;
 color: antiquewhite
 }
-.grid-container{
-    background-color: #00ffff;
-    color: black;
-    font-weight: bolder;
-    text-align: center;
-    }
-
- .card {
-float: left;
-margin: 50px;
-padding: 10px 3px;
- }
 
 .button{
     background-color: #00ffff;
@@ -32,15 +20,22 @@ padding: 10px 3px;
   }
 
 .grid-container{
-background-color: #00ffff;
-color: black;
-font-weight: bolder;
-text-align: center;
+    background-color: #00ffff;
+    color: black;
+    font-weight: bolder;
+    text-align: center;
 }
 
  .card {
-float: left;
-margin: 50px;
-padding: 10px 3px;
+    float: left;
+    margin: 50px;
+    padding: 10px 3px;
+ }
+
+ /* makes it so the lyrics box hangs under the video at less than 500 px screens */
+ @media screen and (max-width: 500px){
+     .lyrics{
+         margin-top: 315px;
+     }
  }
 
