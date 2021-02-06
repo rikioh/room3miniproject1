@@ -1,9 +1,20 @@
-var api_key = 'AIzaSyBtIgwisnZlgFJWWjVAgFG-Mcdm1xSQWSw'
-URL = 'https://www.googleapis.com/youtube/v3/search?part=snippet&q=soccer&type=video&key=AIzaSyBtIgwisnZlgFJWWjVAgFG-Mcdm1xSQWSw'
-fetch(URL)
-.then(function(reponse) {
-    console.log(reponse.json());
+var api_key = 'AIzaSyBvS-jc6nyGazk1uKhItix2MmiT-HKWqQ0'
+URL = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${youtubeSearch}&type=video&key=${api_key}`
+const youtubeurl = fetch(URL)
+// this is the same as .then(function(response){response.json()})
+.then((response) => response.json())
+.then((data) => {
+    console.log(data.items[0].id.videoId);
+    
+    // Populate iframe - THIS IS WRONG PROBABLY
+    static_youtube_url = "https://www.youtube.com/embed/"
+    url = data.items[0].id.videoId
+    fullurl = static_youtube_url+url
+
+    $('#video_player').attr('src', fullurl)
 })
+.catch(err => { console.log(err);})
+
 
 // $(document).ready(function()
 // {
