@@ -3,6 +3,14 @@ background-color: #262626;
 color: antiquewhite
 }
 
+.grid-container{
+background-color: #00ffff;
+color: black;
+font-weight: bolder;
+text-align: center;
+
+}
+
 .button{
     background-color: #00ffff;
     font-weight: bolder;
