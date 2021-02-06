@@ -6,9 +6,17 @@ var lyricsEl = $("#lyrics_box")
 var searchBtn = $("#searchBtn")
 // url for lyrics API
 var lyricsUrl = "https://api.lyrics.ovh/v1/"
-// url for youtube API
-var youtube_api_key = "AIzaSyBtIgwisnZlgFJWWjVAgFG-Mcdm1xSQWSw"
 
+// pulls the two old search terms and adds them into a single string able to be parsed into the youtube.JS script
+var youtubeSearch = `${JSON.parse(localStorage.getItem("songSplit"))}+${JSON.parse(localStorage.getItem("artistSplit"))}`
+
+if(!youtubeSearch){
+    console.log("no previous search");
+}
+else{
+    youtubeSearch = `${JSON.parse(localStorage.getItem("songSplit"))}+${JSON.parse(localStorage.getItem("artistSplit"))}`
+    console.log(youtubeSearch);
+}
 
 $("#searchBtn").on("click", function (event) {
     event.preventDefault();
@@ -35,6 +43,12 @@ $("#searchBtn").on("click", function (event) {
             .then(function (locRes) {
                 // sets lyrics from the api response as a local storage variable to be called/pulled on the results page load
                 localStorage.setItem("projectLyrics",JSON.stringify(locRes.lyrics))
+                var songSplit = songTitle.split(" ")
+                var songJoin = songSplit.join("+")
+                localStorage.setItem("songSplit",JSON.stringify(songJoin))
+                var artistSplit = artistName.split(" ")
+                var artistJoin = artistSplit.join("+")
+                localStorage.setItem("artistSplit",JSON.stringify(artistJoin))
                 // loads the display video.lyrics page
                 window.location.href = "./display_video.html"
             })
@@ -44,3 +58,6 @@ $("#searchBtn").on("click", function (event) {
 
 
 })
+
+
+

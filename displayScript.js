@@ -1,14 +1,10 @@
 
-// Populate iframe
-// static_youtube_url = "https://www.youtube.com/embed/"
-// url = ""
-// url = object.items[0].id.VideoId
-// $('#video_player').attr('src', static_youtube_url + url)
 
 // get lyrics from local storage and parse them into a new variable on results page load
 var searchLyrics = JSON.parse(localStorage.getItem("projectLyrics"))
 // split the lyrics into distinct lines by \n (new line) characters
 var searchLyricsSplit = searchLyrics.split("\n");
+
 
 // Populate lyrics using a for loop
 for (i=0;i<searchLyricsSplit.length;i++){
