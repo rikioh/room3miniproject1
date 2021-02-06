@@ -41,6 +41,10 @@ $("#searchBtn").on("click", function (event) {
             return response.json();
         })
             .then(function (locRes) {
+                if(locRes.lyrics===""){
+                    alert("This song does not exist in our databases. Check your song and artist spelling.")
+                }
+                else{
                 // sets lyrics from the api response as a local storage variable to be called/pulled on the results page load
                 localStorage.setItem("projectLyrics",JSON.stringify(locRes.lyrics))
                 var songSplit = songTitle.split(" ")
@@ -49,8 +53,10 @@ $("#searchBtn").on("click", function (event) {
                 var artistSplit = artistName.split(" ")
                 var artistJoin = artistSplit.join("+")
                 localStorage.setItem("artistSplit",JSON.stringify(artistJoin))
+                console.log(JSON.stringify(locRes.lyrics))
                 // loads the display video.lyrics page
                 window.location.href = "./display_video.html"
+                }
             })
     }
     // run the fetch call passing in artist name and song title as variables
