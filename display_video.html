@@ -1,39 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!-- google fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400&family=Merriweather:wght@700&display=swap"
-    rel="stylesheet" />
+        rel="stylesheet" />
     <!-- foundation css -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
-    integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous" />
+        integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous" />
     <!-- project specific CSS -->
     <link rel="stylesheet" href="./style.css">
     <!-- JQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- foundation JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/js/foundation.min.js" integrity="sha512-9cXmvmK1gIDw3Tol6Xg/1SUls/CvBMgedu1aDjT519sQzy7jk+LoezyQqlzClW2LgXww4xEyuqtofg7PtWteLQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/js/foundation.min.js"
+        integrity="sha512-9cXmvmK1gIDw3Tol6Xg/1SUls/CvBMgedu1aDjT519sQzy7jk+LoezyQqlzClW2LgXww4xEyuqtofg7PtWteLQ=="
+        crossorigin="anonymous"></script>
 </head>
+
 <body>
-    <div class = "grid-x">
-        <div class = "cell small-4">
+    <!-- search bar on top -->
+    <header class="top-bar">
+        <div class="top-bar-left">
+            <ul class="menu">
+                <h4><strong>KARAO.KE</strong></h4>
+            </ul>
+        </div>
+        <div class="top-bar-right">
+            <ul class="menu">
+                <li><input id="songTitle" class="form-input" type="text" placeholder="Song Title"></li>
+                <li><input id="artistName" class="form-input" type="text" placeholder="Artist Name"></li>
+                <li><button id="searchBtn" class="button large">Search!</button></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="grid-x">
+        <div class="cell small-4">
             <!-- Video area -->
             <div class="sticky">
-                <iframe id="video_player" width="420" height="315" webkit-playsinline="true" playsinline="true"></iframe>
+                <iframe id="video_player" width="420" height="315" webkit-playsinline="true"
+                    playsinline="true"></iframe>
             </div>
-        </div> 
-        <div class = "cell small-8 lyrics">
-        <!-- Lyrics area -->
+        </div>
+        <div class="cell small-8 lyrics">
+            <!-- Lyrics area -->
             <h3>LYRICS</h3>
             <div id="lyrics_box"></div>
         </div>
     </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="./script.js"></script>
-<script src="./youTube.js"></script>
-<script src="./displayScript.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./script.js"></script>
+    <script src="./youTube.js"></script>
+    <script src="./displayScript.js"></script>
 </body>
+
 </html>
