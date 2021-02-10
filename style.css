@@ -1,8 +1,50 @@
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
 body {
 background-color: #262626;
-color: antiquewhite
+color: antiquewhite;
+position: relative;
+padding-bottom: 58px;
+min-height: 100vh;
 }
 
+.grid-container{
+    display: grid;
+    grid-template-columns: minmax(20px, 1fr) auto minmax(20px, 1fr);
+    align-items: center;
+    text-align: center;
+    grid-gap: 20px;
+    width: 100%;
+    background-color: #00ffff;
+   }
+
+   h1 {
+   color: black;    
+   }
+
+   .grid-container:before,
+    .grid-container:after {
+    content: '';
+    border-top: 2px solid;
+}
+
+ .card {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    max-width: 800px;
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+}
 .button{
     background-color: #00ffff;
     font-weight: bolder;
@@ -19,18 +61,6 @@ color: antiquewhite
     height: 23px;
   }
 
-.grid-container{
-    background-color: #00ffff;
-    color: black;
-    font-weight: bolder;
-    text-align: center;
-}
-
- .card {
-    float: left;
-    margin: 50px;
-    padding: 10px 3px;
- }
 
  /* makes it so the lyrics box hangs under the video at less than 500 px screens */
  @media screen and (max-width: 500px){
@@ -39,3 +69,13 @@ color: antiquewhite
      }
  }
 
+footer {
+    text-align: center;
+    background-color: #00ffff;
+    color: black;
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-size: 18px;
+  }
