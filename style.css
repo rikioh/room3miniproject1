@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
+}
 
 body {
 background-color: #262626;
@@ -12,7 +12,7 @@ padding-bottom: 58px;
 min-height: 100vh;
 }
 
-.grid-container{
+.grid-container {
     display: grid;
     grid-template-columns: minmax(20px, 1fr) auto minmax(20px, 1fr);
     align-items: center;
@@ -20,19 +20,23 @@ min-height: 100vh;
     grid-gap: 20px;
     width: 100%;
     background-color: #00ffff;
-   }
+}
 
-   h1 {
+h1 {
    color: black;    
-   }
+}
 
-   .grid-container:before,
-    .grid-container:after {
+.grid-container:before,
+.grid-container:after {
     content: '';
     border-top: 2px solid;
 }
 
- .card {
+h4 {
+    color: black
+}
+
+.card {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -45,29 +49,31 @@ min-height: 100vh;
     justify-content: space-between;
     border-radius: 5px;
 }
-.button{
+
+.button {
     background-color: #00ffff;
     font-weight: bolder;
     color: black;
     -webkit-text-stroke-width: 0.5px;
     -webkit-text-stroke-color: antiquewhite;
 }
+
 /* sticks video to top of the screen */
 .sticky {
     position: fixed;
-    top: 0;
+    top: 50;
     left: 0;
     width: 100%;
     height: 23px;
-  }
+}
 
 
  /* makes it so the lyrics box hangs under the video at less than 500 px screens */
- @media screen and (max-width: 500px){
-     .lyrics{
-         margin-top: 315px;
-     }
- }
+@media screen and (max-width: 500px){
+    .lyrics {
+        margin-top: 315px;
+    }
+}
 
 footer {
     text-align: center;
@@ -78,4 +84,4 @@ footer {
     bottom: 0;
     width: 100%;
     font-size: 18px;
-  }
+}
