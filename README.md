@@ -10,19 +10,18 @@
     The purpose of this project was to utilize the knowledge we've learned thus far to create a web application from scratch with our fellow classmates.
 
  ## Files Used
-    \
-    displayScript.js \
-    display_video.html \
-    index.html \
-    lyrics.js \ 
-    script.js \
-    style.css \
-    youTube.js \
+    
+   displayScript.js \
+   display_video.html \
+   index.html \ 
+   script.js \
+   style.css \
+   youTube.js 
 
  ## Deployed Website
    \
    https://rikioh.github.io/room3miniproject1/
-  ![Website screenshot](https://1drv.ms/u/s!AsgMrJ0sqKWKguZ-PC-775Ol5b8CUg?e=qCRl9P)
+  ![Website screenshot] (https://drive.google.com/file/d/1WDpLL5yTXCTE7RY50-yLel8aQcjiKSCL/view?usp=sharing)
    
    
 ## Credits
