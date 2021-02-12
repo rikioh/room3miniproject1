@@ -1,31 +1,26 @@
 # room3miniproject1
 
 ## Overview
-  \
   Welcome to Karao.ke, your key destination for Karaoke fun!
   
   
-## Purpose
-   \
-    The purpose of this project was to utilize the knowledge we've learned thus far to create a web application from scratch with our fellow classmates.
+## Description and Usage
+  This application is to be used to watch a youtube music video of an artist and song of a users choosing. In addition to being able to viewing this video inline, the user will also be presented with a full script of the song's lyrics in the same page. The application works for any song that is available in our lyrics api database. If a user chooses a song and artist combination that is not in the database they will receive an error alert notifying that the song is not in the database and to check their spelling if applicable.
 
  ## Files Used
-    
-   displayScript.js \
-   display_video.html \
-   index.html \ 
-   script.js \
-   style.css \
-   youTube.js 
+  displayScript.js \
+  display_video.html \
+  index.html \ 
+  script.js \
+  style.css \
+  youTube.js 
 
  ## Deployed Website
-   \
-   https://rikioh.github.io/room3miniproject1/
-  ![Website screenshot] (https://drive.google.com/file/d/1WDpLL5yTXCTE7RY50-yLel8aQcjiKSCL/view?usp=sharing)
+  https://rikioh.github.io/room3miniproject1/
+  ![Website screenshot](https://drive.google.com/file/d/1WDpLL5yTXCTE7RY50-yLel8aQcjiKSCL/view?usp=sharing "Expected output of search landing page")
    
    
 ## Credits
-   \
   Faiz Azeem (https://github.com/faiza002) \
   Colin Bell (https://github.com/cobell206) \
   Page Black (https://github.com/noheropage) \
@@ -33,6 +28,8 @@
   Victoria Garner (https://github.com/MsMischief) \
   Patrick Stutts (https://github.com/PatrickStutts)
 
+## Technologies used
+  HTML, Javascript, CSS, JQuery, Lyrics.OVH API, Google Youtube API
 
 ## License
  
