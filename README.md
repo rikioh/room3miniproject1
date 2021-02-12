@@ -10,14 +10,14 @@
  ## Files Used
   displayScript.js \
   display_video.html \
-  index.html \ 
+  index.html \
   script.js \
   style.css \
   youTube.js 
 
  ## Deployed Website
   https://rikioh.github.io/room3miniproject1/
-  ![Website screenshot](https://drive.google.com/file/d/1WDpLL5yTXCTE7RY50-yLel8aQcjiKSCL/view?usp=sharing "Expected output of search landing page")
+ 
    
    
 ## Credits
