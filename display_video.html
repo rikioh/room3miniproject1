@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Okie Dokie Karaoke</title>
     <!-- google fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400&family=Merriweather:wght@700&display=swap"
         rel="stylesheet" />
@@ -13,17 +13,12 @@
         integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous" />
     <!-- project specific CSS -->
     <link rel="stylesheet" href="./style.css">
-    <!-- JQuery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- foundation JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/js/foundation.min.js"
-        integrity="sha512-9cXmvmK1gIDw3Tol6Xg/1SUls/CvBMgedu1aDjT519sQzy7jk+LoezyQqlzClW2LgXww4xEyuqtofg7PtWteLQ=="
-        crossorigin="anonymous"></script>
+
 </head>
 
 <body>
     <!-- search bar on top -->
-    <header class="top-bar">
+    <header class="top-bar grid-x">
         <div class="top-bar-left">
             <ul class="menu">
                 <h4><strong>KARAO.KE</strong></h4>
@@ -39,20 +34,32 @@
     </header>
 
     <div class="grid-x">
-        <div class="cell small-4">
+        <div class="cell medium-auto">
             <!-- Video area -->
             <div class="sticky">
                 <iframe id="video_player" width="420" height="315" webkit-playsinline="true"
                     playsinline="true"></iframe>
             </div>
         </div>
-        <div class="cell small-8 lyrics">
+        <div class="cell medium-auto lyrics">
             <!-- Lyrics area -->
+            <br><br>
+            <hr>
             <h3>LYRICS</h3>
             <div id="lyrics_box"></div>
         </div>
     </div>
+
+    <footer>
+        <p>Copyright © 2021 Okie Dokie Karaoke</p>
+    </footer>
+
+    <!-- JQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- foundation JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/js/foundation.min.js"
+        integrity="sha512-9cXmvmK1gIDw3Tol6Xg/1SUls/CvBMgedu1aDjT519sQzy7jk+LoezyQqlzClW2LgXww4xEyuqtofg7PtWteLQ=="
+        crossorigin="anonymous"></script>
     <script src="./script.js"></script>
     <script src="./youTube.js"></script>
     <script src="./displayScript.js"></script>
