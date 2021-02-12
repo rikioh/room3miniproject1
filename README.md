@@ -17,7 +17,10 @@
 
  ## Deployed Website
   https://rikioh.github.io/room3miniproject1/
-  ![Website screenshot](https://drive.google.com/file/d/1WDpLL5yTXCTE7RY50-yLel8aQcjiKSCL/view?usp=sharing "Expected output of search landing page")
+  
+  ![Homepage screenshot](project_homepage.png)
+  ![Search results](lyrics_page.png)
+
    
    
 ## Credits
