@@ -1,5 +1,6 @@
-var api_key = 'AIzaSyAt1IVQUm5kfng4sfxSvB3upftTj096Kyw'
+var api_key = 'AIzaSyCwd6_3kePMtvz1EIqU8jU4t_IfoCXlavs'
 URL = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${youtubeSearch}&type=video&key=${api_key}`
+
 const youtubeurl = fetch(URL)
 // this is the same as .then(function(response){response.json()})
 .then((response) => response.json())
